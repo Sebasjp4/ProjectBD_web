@@ -1,0 +1,68 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8"> <!-- Codificación de caracteres para el documento HTML -->
+    <title>Login Page</title> <!-- Título del documento HTML -->
+    <link rel="stylesheet" href="styles.css"> <!-- Enlace al archivo CSS -->
+
+</head>
+<body>
+    <main class="form-wrapper"> <!-- Contenedor principal para los formularios de inicio de sesión y registro -->
+
+        <div class="login-container"> <!-- Contenedor para el formulario de inicio de sesión -->
+            
+            <h2>Iniciar sesión</h2>
+
+            <!-- formulario de inicio de sesión -->
+            <form action="#" method="post"> <!-- Action es donde se envían los datos del formulario -->
+                <!-- y method es el tipo de solicitud que se realiza (GET o POST) 
+                donde post es más seguro para enviar datos sensibles 
+                y get es más adecuado para obtener datos -->
+                
+                <!-- Campos de entrada para el formulario de inicio de sesión -->
+                <div class="form-group"> <!-- Agrupación de elementos del formulario -->
+                    <label for="login-usuario">Usuario</label> <!-- Etiqueta para el campo de usuario -->
+                    <input type="text" id="login-usuario" name="usuario" placeholder="Ingresar usuario" required>
+                    </div>
+
+                <div class="form-group">
+                    <label for="login-contrasena">Contraseña</label> <!-- Etiqueta para el campo de contraseña -->
+                    <input type="password" id="login-contrasena" name="contrasena" placeholder="Ingresar Contraseña" required>
+                    </div>
+
+                <button type="submit" class="btn btn-primary">Ingresar</button> <!-- Botón para enviar el formulario -->
+                </form>
+        </div> <!-- Fin del contenedor de inicio de sesión -->
+
+        <div class="register-container"> <!-- Contenedor para el formulario de registro -->
+
+            <h2>Registrarse</h2> 
+
+            <form action="#" method="post"> <!-- Formulario de registro --> 
+                <div class="form-group"> <!-- Agrupación de elementos del formulario -->
+                    <label for="register-usuario">Usuario</label> <!-- Etiqueta para el campo de usuario -->
+                    <input type="text" id="register-usuario" name="usuario" placeholder="Ingresar nombre de usuario" required>
+                </div>
+
+                <div class="form-group"> <!-- Agrupación de elementos del formulario -->
+                    <label for="register-email">Correo electrónico</label> <!-- Etiqueta para el campo de correo electrónico -->
+                    <input type="email" id="register-email" name="email" placeholder="Ingresar correo" required>
+                    </div>
+
+                <div class="form-group"> <!-- Agrupación de elementos del formulario -->
+                    <label for="register-contrasena">Contraseña</label> <!-- Etiqueta para el campo de contraseña -->
+                    <input type="password" id="register-contrasena" name="contrasena" placeholder="Ingresar contraseña" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="register-repetir-contrasena">Repetir contraseña</label>
+                    <input type="password" id="register-repetir-contrasena" name="repetir-contrasena" placeholder="Repetir contraseña" required>
+                </div>
+
+                <button type="submit" class="btn btn-secondary">Ingresar</button>
+            </form>
+        </div>
+
+    </main> 
+</body>
+</html>
