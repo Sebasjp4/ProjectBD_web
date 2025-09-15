@@ -1,0 +1,193 @@
+/* --- 1. VARIABLES GLOBALES Y RESET BÁSICO --- */
+
+/* :root es el lugar perfecto para declarar nuestra "paleta de colores" y fuentes.
+   Estas variables estarán disponibles en todo el documento. */
+:root {
+  --color-fondo-principal: #111111;
+  --color-fondo-tarjeta: #171717;
+  --color-fondo-input: #333333;
+  --color-primario-rojo: #DE3C4B;
+  --color-texto-principal: #FFFFFF;
+  --color-texto-secundario: #a0a0a0;
+  --color-borde: #171717;
+  --fuente-principal: 'Inter', 'Inter var', Arial, sans-serif; /* Fuente principal Inter */
+}
+
+/* Importa Inter desde Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
+
+/* Un "reset" simple para eliminar los márgenes y rellenos por defecto de los navegadores
+   y asegurar que el tamaño de los elementos incluya el borde y el padding. */
+
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+
+/* --- 2. ESTILOS GENERALES DEL CUERPO DE LA PÁGINA --- */
+
+body {
+    font-family: var(--fuente-principal);
+    background-color: var(--color-fondo-principal);
+    color: var(--color-texto-principal);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+/* --- 3. CONTENEDOR PRINCIPAL DEL FORMULARIO --- */
+
+/* Estilos para el <main class="form-wrapper"> que contiene ambos formularios. */
+.form-wrapper {
+    max-width: 3400px; /* Más ancho */
+    min-height: 50px;
+    display: flex;
+    gap: 0; /* Sin espacio entre las dos tarjetas */
+    background: none; 
+    padding: 40px; /* Sin padding */
+    border-radius: 0; /* Sin bordes redondeados */
+    box-shadow: none; /* Sin sombra */
+}
+
+/* Tarjeta izquierda (login) */
+.login-container {
+    background-color: var(--color-fondo-tarjeta);
+    flex: 1;
+    padding: 60px 100px; /* Más ancho */
+    border-radius: 25px 0 0 25px;
+    box-shadow: 0px 20px 50px rgba(0,0,0,0.0);
+    z-index: 2;
+    position: relative;
+}
+
+/* Tarjeta derecha (registro) */
+.register-container {
+    background: none;
+    flex: 1;
+  padding: 60px 100px; /* Más ancho */
+    border-radius: 0 25px 25px 0;
+    border-right: 12px solid var(--color-borde);
+    border-bottom: 12px solid var(--color-borde);
+    border-top: 12px solid var(--color-borde);
+    box-shadow: none;
+    z-index: 1;
+    position: relative;
+}
+
+/* --- 4. ESTILOS PARA LAS COLUMNAS (LOGIN Y REGISTRO) --- */
+
+/* Seleccionamos ambos contenedores, el de login y el de registro. */
+.login-container,
+.register-container {
+/* La propiedad flex: 1; es un truco para que ambos contenedores
+     compartan el espacio disponible a partes iguales. */
+flex: 1;
+}
+
+/* Títulos "Iniciar sesión" y "Registrarse" */
+h2 {
+font-size: 28px;
+  margin-bottom: 30px; /* Espacio debajo del título */
+  font-weight: 500; /* Un grosor de fuente medio */
+}
+
+.login-container h2,
+.register-container h2 {
+  text-align: center; /* Centra los títulos */
+    width: 100%;
+    font-family: 'Inter', 'Inter var', Arial, sans-serif;
+  font-weight: 700; /* Bold para títulos */
+}
+
+
+/* --- 5. ESTILOS PARA LOS ELEMENTOS DEL FORMULARIO --- */
+
+/* El div que agrupa cada etiqueta (label) y campo de texto (input) */
+.form-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  align-items: flex-start; /* Alinea a la izquierda */
+    margin-bottom: 20px;
+}
+
+label {
+  display: block; /* Hace que la etiqueta ocupe su propia línea */
+  margin-bottom: 8px; /* Pequeño espacio entre la etiqueta y el campo de texto */
+font-weight: bold;
+color: var(--color-texto-principal);
+    font-family: 'Inter', 'Inter var', Arial, sans-serif;
+  font-weight: 500; /* Semi-bold */
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+  width: 85%; /* Más largos, pero no ocupan todo el contenedor */
+  min-width: 350px; /* Asegura que sean largos en pantallas grandes */
+  max-width: 600px; /* Opcional: límite máximo */
+  padding: 12px 15px; /* Espacio interno para que el texto no esté pegado a los bordes */
+  background-color: var(--color-fondo-input); /* Color de fondo del campo */
+  border: 1px solid var(--color-borde); /* Borde sutil */
+  border-radius: 5px; /* Esquinas redondeadas */
+  color: var(--color-texto-principal); /* Color del texto que escribe el usuario */
+font-size: 16px;
+display: block; /* Asegura alineación a la izquierda */
+margin-left: 0; /* Sin margen izquierdo */
+font-family: 'Inter', 'Inter var', Arial, sans-serif;
+  font-weight: 400; /* Normal */
+}
+
+/* Estilo para el texto de ejemplo (placeholder) dentro de los inputs */
+input::placeholder {
+color: var(--color-texto-secundario);
+}
+
+/* Cuando el usuario hace clic en un input, se le añade un borde del color primario */
+input:focus {
+  outline: none; /* Quitamos el borde por defecto del navegador */
+border-color: var(--color-primario-rojo);
+}
+
+
+/* --- 6. ESTILOS PARA LOS BOTONES --- */
+
+/* Estilos base que compartirán ambos botones */
+.btn {
+  width: 100%; /* Ocupa todo el ancho */
+padding: 12px;
+border: none;
+border-radius: 5px;
+font-size: 16px;
+font-weight: bold;
+  cursor: pointer; /* El cursor se convierte en una manita al pasar por encima */
+  margin-top: 10px; /* Espacio arriba del botón */
+  transition: background-color 0.3s ease, transform 0.1s ease; /* Transición suave para el hover */
+}
+
+/* Botón principal (rojo) */
+.btn-primary {
+background-color: var(--color-primario-rojo);
+color: var(--color-texto-principal);
+}
+
+/* Botón secundario (con borde) */
+.btn-secondary {
+    background-color: transparent; 
+    border: 1px solid var(--color-texto-secundario);
+    color: var(--color-primario-rojo); /* Texto rojo */
+}
+
+/* Efecto al pasar el ratón por encima de los botones */
+.btn:hover {
+  opacity: 0.9; /* Hacemos el botón ligeramente transparente */
+}
+
+/* Un pequeño efecto de "click" al presionar el botón */
+.btn:active {
+transform: scale(0.98);
+}
