@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Red Social</title>
+    
+    <link rel="stylesheet" href="CSS\style.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+    <header class="top-bar">
+        <div class="logo">
+            <i class="fa-solid fa-satellite-dish"></i>
+            <span>MiRed</span>
+        </div>
+
+        <div class="search-bar">
+            <form>
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="search" placeholder="Buscar">
+            </form>
+        </div>
+
+        <div class="user-actions">
+            <a href="#" class="icon"><i class="fa-solid fa-bell"></i></a>
+            <a href="#" class="icon"><i class="fa-solid fa-comment-dots"></i></a>
+            <a href="#" class="user-profile-link">
+                <img class="user-profile-icon" src="https://i.pravatar.cc/40?u=miusuario" alt="Foto de perfil">
+            </a>
+        </div>
+    </header> 
+    
+    <main class="main-container">
+
+        <aside class="sidebar left-sidebar"> <!-- Barra lateral izquierda -->
+            <nav class="main-nav">
+                <ul> <!-- Menú de navegación principal -->
+                    <li><a href="#" class="active"><i class="fa-solid fa-house"></i> <span>Inicio</span></a></li>
+                    <li><a href="#"><i class="fa-solid fa-users"></i> <span>Amigos</span></a></li>
+                    <li><a href="#"><i class="fa-solid fa-user"></i> <span>Perfil</span></a></li>
+                </ul>
+
+            </nav>
+            <div class="friends-section">
+                <p>Espacio para amigos</p>
+            </div>
+        
+        </aside> <section class="feed"> <!-- Contenido principal -->
+
+            
+            <article class="post">
+                <header class="post-header">
+                    <div class="user-info">
+                        <img class="user-avatar" src="https://i.pravatar.cc/50?u=user1234" alt="Avatar de User 1234">
+                        <div class="user-details">
+                            <a href="#" class="username">User 1234</a>
+                            <span class="post-date">28/08/2025</span>
+                        </div>
+                    </div>
+                    <div class="post-options">
+                        <a href="#"><i class="fa-solid fa-ellipsis"></i></a>
+                    </div>
+                </header>
+                <div class="post-content">
+                    <p>Lorem ipsum dolor sit amet consectetur adipiscing elit dignissim purus, himenaeos maecenas phasellus eros ad aliquet erat malesuada, pharetra viverra sollicitudin urna semper nunc etiam suscipit. Phasellus facilisi</p>
+                </div>
+                <footer class="post-footer">
+                    <div class="post-actions">
+                        <a href="#" class="action-like"><i class="fa-regular fa-heart"></i> 120</a>
+                        <a href="#" class="action-comment"><i class="fa-regular fa-comment"></i> 14</a>
+                        <a href="#" class="action-share"><i class="fa-solid fa-share"></i> 12</a>
+                    </div>
+                </footer>
+            </article>
+
+            <article class="post">
+                <header class="post-header">
+                    <div class="user-info">
+                        <img class="user-avatar" src="https://i.pravatar.cc/50?u=anaGomez" alt="Avatar de Ana Gómez">
+                        <div class="user-details">
+                            <a href="#" class="username">Ana Gómez</a>
+                            <span class="post-date">15/09/2025</span>
+                        </div>
+                    </div>
+                    <div class="post-options">
+                        <a href="#"><i class="fa-solid fa-ellipsis"></i></a>
+                    </div>
+                </header>
+                <div class="post-content">
+                    <p>Acabo de terminar un proyecto increíble con CSS Grid. ¡Qué herramienta tan poderosa para crear layouts complejos! Totalmente recomendada.</p>
+                </div>
+                <footer class="post-footer">
+                    <div class="post-actions">
+                        <a href="#" class="action-like"><i class="fa-regular fa-heart"></i> 98</a>
+                        <a href="#" class="action-comment"><i class="fa-regular fa-comment"></i> 21</a>
+                        <a href="#" class="action-share"><i class="fa-solid fa-share"></i> 7</a>
+                    </div>
+                </footer>
+            </article>
+
+            <article class="post">
+                <header class="post-header">
+                    <div class="user-info">
+                        <img class="user-avatar" src="https://i.pravatar.cc/50?u=carlosRuiz" alt="Avatar de Carlos Ruiz">
+                        <div class="user-details">
+                            <a href="#" class="username">Carlos Ruiz</a>
+                            <span class="post-date">14/09/2025</span>
+                        </div>
+                    </div>
+                    <div class="post-options">
+                        <a href="#"><i class="fa-solid fa-ellipsis"></i></a>
+                    </div>
+                </header>
+                <div class="post-content">
+                    <p>¿Alguien tiene alguna recomendación de libros sobre JavaScript avanzado? Busco algo que vaya más allá de los fundamentos.</p>
+                </div>
+                <footer class="post-footer">
+                    <div class="post-actions">
+                        <a href="#" class="action-like"><i class="fa-regular fa-heart"></i> 250</a>
+                        <a href="#" class="action-comment"><i class="fa-regular fa-comment"></i> 55</a>
+                        <a href="#" class="action-share"><i class="fa-solid fa-share"></i> 18</a>
+                    </div>
+                </footer>
+            </article>
+            
+            <article class="post">
+                <header class="post-header">
+                    <div class="user-info">
+                        <img class="user-avatar" src="https://i.pravatar.cc/50?u=lauraPerez" alt="Avatar de Laura Pérez">
+                        <div class="user-details">
+                            <a href="#" class="username">Laura Pérez</a>
+                            <span class="post-date">12/09/2025</span>
+                        </div>
+                    </div>
+                    <div class="post-options">
+                        <a href="#"><i class="fa-solid fa-ellipsis"></i></a>
+                    </div>
+                </header>
+                <div class="post-content">
+                    <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec velit neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.</p>
+                </div>
+                <footer class="post-footer">
+                    <div class="post-actions">
+                        <a href="#" class="action-like"><i class="fa-regular fa-heart"></i> 180</a>
+                        <a href="#" class="action-comment"><i class="fa-regular fa-comment"></i> 30</a>
+                        <a href="#" class="action-share"><i class="fa-solid fa-share"></i> 5</a>
+                    </div>
+                </footer>
+            </article>
+            <p>Espacio para más publicaciones...</p>
+
+        </section>
+        <aside class="sidebar right-sidebar"> <!-- Barra lateral derecha -->
+            <div class="search-widget">
+                <input type="search" placeholder="Buscar">
+            </div>
+            <div class="comments-section">
+                <p>Espacio para comentarios</p>
+            </div>
+        </aside>
+    </main> 
+</body>
+</html>

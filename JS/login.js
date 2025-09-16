@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Validación: usuario y contraseña correctos
     if (usuarioIngresado === usuarioValido.usuario && contrasenaIngresada === usuarioValido.contrasena) {
         alert('¡Inicio de sesión exitoso! Bienvenido, ' + usuarioValido.usuario + '.');
-      // Aquí podrías redirigir a otra página si lo deseas
+        window.location.href = 'index.html'; // Redirige al usuario
     } else {
         alert('Usuario o contraseña incorrectos.');
     }
